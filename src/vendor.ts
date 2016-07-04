@@ -6,7 +6,6 @@ import '@angular/http';
 import '@angular/platform-browser-dynamic';
 import '@angular/router';
 
-import 'rxjs';
 import 'jquery';
 import 'foundation-sites';
 import './foundation/import.scss';
