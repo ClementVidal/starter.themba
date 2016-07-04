@@ -45,7 +45,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 exclude: /\.component\.scss$/,
-                loader: ExtractTextPlugin.extract("style","css?-url!postcss-loader!sass")
+                loader: "style!css?-url!postcss-loader!sass"
             }
         ]
     },
@@ -59,7 +59,6 @@ module.exports = {
         minimize: false // workaround for ng2
     },
     plugins: [
-        new ExtractTextPlugin('[name].css'),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
         }),
