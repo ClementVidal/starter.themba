@@ -2,5 +2,5 @@
     "preset": "google",
 
     "maximumLineLength": 120,
-    "validateIndentation": 4,
+    "validateIndentation": 4
 }
