@@ -20,13 +20,10 @@ module.exports = {
 
     module: {
         loaders: [
+            // Load typescript files
             {
                 test: /\.ts$/,
                 loader: 'ts'
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-                loader: 'file?name=assets/[name].[hash].[ext]'
             },
             // This map to html files used from angular components
             {
@@ -49,11 +46,6 @@ module.exports = {
                 test: /\.scss$/,
                 exclude: /\.component\.scss$/,
                 loader: ExtractTextPlugin.extract("style","css?-url!postcss-loader!sass")
-            },
-            {
-                test: /\.css$/,
-                exclude: helpers.root('src', 'app'),
-                loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
             }
         ]
     },
@@ -67,6 +59,7 @@ module.exports = {
         minimize: false // workaround for ng2
     },
     plugins: [
+        new ExtractTextPlugin('[name].css'),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
         }),

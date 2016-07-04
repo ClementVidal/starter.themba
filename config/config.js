@@ -1,6 +1,4 @@
 
-exports = {
-    publicPath: '',
-    title: '__title__',
-    description: '__description__'
-}
+exports.publicPath= '/';
+exports.description= '__description__';
+exports.title= '__title__';
