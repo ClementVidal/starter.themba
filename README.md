@@ -1,9 +1,24 @@
-# __title__
+# Themba
+
+Lightweight seed for Angular2 projects.
 
 ## Description
 
-__description__
+Integrate the following tools and libs:
+
+- Angular2 rc6
+- Webpack 1 
+    - Webpack dashboard
+- Foundation 6
+
+## Usage
+
+Use npm script to develop and build with this seed:
+
+- **clean:(dev|prod)**: Clean the build directory 
+- **build:(dev|prod)**: Build the app
+- **serve:(dev|prod)**: Serve the app ;)
 
 --
 
-By: __author__
+By: clementvidalpro@gmail.com

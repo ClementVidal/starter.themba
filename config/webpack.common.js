@@ -40,7 +40,7 @@ module.exports = {
             {
                 test: /\.component\.scss$/,
                 loader: "to-string!css?-url!postcss-loader!sass"
-            },            
+            },
             // This map to scss files used directly, i.e: not from angular components
             {
                 test: /\.scss$/,
@@ -72,7 +72,7 @@ module.exports = {
         }),
         new CleanWebpackPlugin(['public/bundle'], {
             root: helpers.root('.'),
-            verbose: true, 
+            verbose: true,
             dry: false
         }),
         new webpack.ProvidePlugin({

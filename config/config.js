@@ -1,4 +1,4 @@
 
 exports.publicPath= '/';
 exports.description= '__description__';
-exports.title= '__title__';
+exports.title= '__TITLE__';
