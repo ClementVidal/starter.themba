@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, AfterViewInit} from '@angular/core';
 
 import {FoundationService} from '../foundation/foundation.service';
 
@@ -7,9 +7,9 @@ import {FoundationService} from '../foundation/foundation.service';
     template: require('./app.component.html'),
     styles: [require('./app.component.scss')]
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
 
-    constructor( private foundationService: FoundationService) {
+    constructor(private foundationService: FoundationService) {
 
     }
 

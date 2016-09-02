@@ -13,4 +13,6 @@ import {PROVIDERS as FOUNDATION_PROVIDERS} from '../foundation';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

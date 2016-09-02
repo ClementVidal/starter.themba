@@ -41,6 +41,7 @@
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "clean-webpack-plugin": "^0.1.9",
+    "codelyzer": "0.0.28",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-loader": "^0.4.3",
@@ -52,6 +53,7 @@
     "style-loader": "^0.13.1",
     "to-string-loader": "^1.1.4",
     "ts-loader": "^0.8.2",
+    "tslint": "^3.15.1",
     "typescript": "^1.8.10",
     "typings": "^1.0.4",
     "webpack": "^1.13.2",
