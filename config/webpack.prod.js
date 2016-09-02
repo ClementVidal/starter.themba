@@ -4,9 +4,9 @@ var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var config = require('./config');
 
-const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
-
 module.exports = webpackMerge(commonConfig, {
+
+    // Setup source map for production
     devtool: 'source-map',
 
     output: {
@@ -22,9 +22,7 @@ module.exports = webpackMerge(commonConfig, {
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.DefinePlugin({
-            'process.env': {
-                'ENV': JSON.stringify(ENV)
-            }
+            'build.environment': JSON.stringify('prod')
         })
     ]
 });
