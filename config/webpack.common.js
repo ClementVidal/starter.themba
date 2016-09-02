@@ -20,28 +20,39 @@ module.exports = {
 
     module: {
         loaders: [
-            // Load typescript files
+            // Typescript files: 
+            // - Compile them
             {
                 test: /\.ts$/,
                 loader: 'ts'
             },
-            // This map to html files used from angular components
+            // HTML for components: 
+            // - Process html (attrs="": do not require any resources specified in the html) 
+            // - Convert it to a string 
             {
                 test: /\.component\.html$/,
                 loader: 'to-string!html?attrs=""'
             },
-            // This map to html files used directly, i.e: not from angular components
+            // Generic HTML: 
+            // - Process html (attrs="": do not require any resources specified in the html) 
             {
                 test: /\.html$/,
                 exclude: /\.component\.html$/,
                 loader: 'html?attrs=""'
             },
-            // This map to scss files used from angular components
+            // SCSS for components: 
+            // - Compile scss
+            // - Apply post scss: autoprefix
+            // - Process css (-url: do not process stuff like url(image.png) ) 
+            // - Convert it to a string 
             {
                 test: /\.component\.scss$/,
                 loader: "to-string!css?-url!postcss-loader!sass"
             },
-            // This map to scss files used directly, i.e: not from angular components
+            // Generic SCSS: 
+            // - Compile scss
+            // - Apply post scss: autoprefix
+            // - Process css (-url: do not process stuff like url(image.png) ) 
             {
                 test: /\.scss$/,
                 exclude: /\.component\.scss$/,
