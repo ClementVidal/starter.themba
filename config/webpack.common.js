@@ -24,7 +24,7 @@ module.exports = {
             // - Compile them
             {
                 test: /\.ts$/,
-                loader: 'ts'
+                loader: 'awesome-typescript-loader'
             },
             // HTML for components: 
             // - Process html (attrs="": do not require any resources specified in the html) 
