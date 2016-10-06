@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 
@@ -38,7 +37,7 @@ module.exports = {
             {
                 test: /\.html$/,
                 exclude: /\.component\.html$/,
-                loader: 'html?attrs=""'
+                loader: 'html?'
             },
             // SCSS for components: 
             // - Compile scss
@@ -53,6 +52,7 @@ module.exports = {
             // - Compile scss
             // - Apply post scss: autoprefix
             // - Process css (-url: do not process stuff like url(image.png) ) 
+            // - Add style to DOM using <style>
             {
                 test: /\.scss$/,
                 exclude: /\.component\.scss$/,
@@ -64,7 +64,7 @@ module.exports = {
         return [autoprefixer];
     },
     sassLoader: {
-        includePaths: [helpers.root("./node_modules/foundation-sites/scss"), helpers.root("./src")]
+        includePaths: [ helpers.root("./src")]
     },
     htmlLoader: {
         minimize: false // workaround for ng2
@@ -85,11 +85,6 @@ module.exports = {
             root: helpers.root('.'),
             verbose: true,
             dry: false
-        }),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            "window.jQuery": "jquery"
         })
     ]
 };

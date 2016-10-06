@@ -1,6 +1,5 @@
 import {Component, AfterViewInit} from '@angular/core';
 
-import {FoundationService} from '../foundation/foundation.service';
 
 @Component({
     selector: 'th-app',
@@ -9,12 +8,11 @@ import {FoundationService} from '../foundation/foundation.service';
 })
 export class AppComponent implements AfterViewInit {
 
-    constructor(private foundationService: FoundationService) {
+    constructor() {
 
     }
 
     ngAfterViewInit() {
-        this.foundationService.initialize();
     }
 
 }
