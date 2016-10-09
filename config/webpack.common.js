@@ -24,7 +24,7 @@ module.exports = {
             // - Compile them
             {
                 test: /\.ts$/,
-                loader: 'awesome-typescript-loader'
+                loader: 'awesome-typescript-loader!angular2-template-loader'
             },
             // HTML for components: 
             // - Process html (attrs="": do not require any resources specified in the html) 

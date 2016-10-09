@@ -4,8 +4,8 @@ import {FoundationService} from '../foundation/foundation.service';
 
 @Component({
     selector: 'th-app',
-    template: require('./app.component.html'),
-    styles: [require('./app.component.scss')]
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
 
