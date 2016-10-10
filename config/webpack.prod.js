@@ -13,14 +13,17 @@ module.exports = webpackMerge(commonConfig, {
         path: helpers.root('build/prod'),
         publicPath: config.publicPath,
         filename: '[name].[chunkhash].js',
-        sourceMapFilename: '[name].[chunkhash].map',
-        chunkFilename: '[id].[chunkhash].chunk.js'
+        sourceMapFilename: '[name].[chunkhash].map'
     },
 
     plugins: [
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
         new webpack.DefinePlugin({
             'build.environment': JSON.stringify('prod')
         })

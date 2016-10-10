@@ -1,0 +1,32 @@
+@import "susy";
+:host {
+    .co-content {
+        border: 1px solid grey;
+    }
+    .co-header {
+        padding: 1rem;
+        line-height: 3rem;
+        .co-content {
+            >div {
+                >* {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    // Layout    
+    .co-header {
+        .co-content {
+            >div:nth-child(1) {
+                @include span( 2);
+            }
+            >div:nth-child(2) {
+                @include push( 8);
+                @include span( 2);
+            }
+        }
+    }
+    .co-content {
+        @include container(12 center);
+    }
+}
