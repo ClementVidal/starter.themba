@@ -1,4 +1,8 @@
-
-exports.publicPath= '/';
-exports.description= '__DESCRIPTION__';
-exports.title= '__TITLE__';
+module.exports = {
+    publicPath: '/',
+    description: '__DESCRIPTION__',
+    title: '__TITLE__',
+    dev: {
+        port: 8080
+    }
+}
